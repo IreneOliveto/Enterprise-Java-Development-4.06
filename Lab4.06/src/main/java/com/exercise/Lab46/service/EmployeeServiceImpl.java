@@ -25,12 +25,12 @@ public class EmployeeServiceImpl implements EmployeeService{
     }
 
     @Override
-    public List<Employee> getEmployeeByStatus(Status status) {
+    public List<Employee> getEmployeesByStatus(Status status) {
         return employeeRepository.getEmployeeByStatus(status);
     }
 
     @Override
-    public List<Employee> getEmployeeByDepartment(String department) {
+    public List<Employee> getEmployeesByDepartment(String department) {
         return employeeRepository.getEmployeeByDepartment(department);
     }
 
@@ -40,7 +40,7 @@ public class EmployeeServiceImpl implements EmployeeService{
     }
 
     @Override
-    public Employee updateEmployeeStatus(String id, com.exercise.Lab46.model.Status status) {
+    public Employee updateEmployeeStatus(String id, Status status) {
         Employee storedEmployee = getEmployeeByEmployeeId(Integer.parseInt(id));
         storedEmployee.setStatus(status);
         return employeeRepository.save(storedEmployee);

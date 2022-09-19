@@ -25,14 +25,14 @@ public class Employee {
 
     @OneToMany(mappedBy="admittedBy")
     @JsonIgnore
-    private List<Patient> patientList;
+    private List<Patient> patientsList;
 
-    public Employee(Integer employeeId, String department, String name, Status status, List<Patient> patientList) {
+    public Employee(Integer employeeId, String department, String name, Status status, List<Patient> patientsList) {
         this.employeeId = employeeId;
         this.department = department;
         this.name = name;
         this.status = status;
-        this.patientList = patientList;
+        this.patientsList = patientsList;
     }
 
     public Employee() {
@@ -70,11 +70,11 @@ public class Employee {
         this.status = status;
     }
 
-    public List<Patient> getPatientList() {
-        return patientList;
+    public List<Patient> getPatientsList() {
+        return patientsList;
     }
 
-    public void setPatientList(List<Patient> patientList) {
-        this.patientList = patientList;
+    public void setPatientsList(List<Patient> patientsList) {
+        this.patientsList = patientsList;
     }
 }

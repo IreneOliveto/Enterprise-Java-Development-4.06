@@ -1,6 +1,7 @@
 package com.exercise.Lab46.service;
 
 import com.exercise.Lab46.model.Patient;
+import com.exercise.Lab46.model.Status;
 import com.exercise.Lab46.repository.PatientRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -40,8 +41,8 @@ public class PatientServiceImpl implements PatientService {
     }
 
     @Override
-    public List<Patient> findAllPatientsByEmployeeStatus(String status) {
-        return patientRepository.findAllPatientsByEmployeeStatus(status);
+    public List<Patient> findAllPatientsByEmployeeStatus(Status status) {
+        return patientRepository.findAllPatientsByEmployeeStatus(status.toString());
     }
 
 

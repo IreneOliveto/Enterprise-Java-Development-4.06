@@ -13,4 +13,10 @@ public class EmployeeUpdateDepartmentDto {
     public void setDepartment(String department) {
         this.department = department;
     }
+
+    public EmployeeUpdateDepartmentDto(String department) {
+        this.department = department;
+    }
+
+    public EmployeeUpdateDepartmentDto() {}
 }

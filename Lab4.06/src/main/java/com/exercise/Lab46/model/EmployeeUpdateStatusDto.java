@@ -13,4 +13,10 @@ public class EmployeeUpdateStatusDto {
     public void setStatus(Status status) {
         this.status = status;
     }
+
+    public EmployeeUpdateStatusDto(Status status) {
+        this.status = status;
+    }
+
+    public EmployeeUpdateStatusDto(){};
 }
